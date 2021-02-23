@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="ASCII">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="styles.css">
+    <title>Demo page</title>
+    <script>
+        setInterval(() => {
+            document.title = new Date().toISOString();
+        }, 1000)
+    </script>
+    <meta name="description" content="En beskrivning">
+    <link rel="shortcut icon" href="https://picsum.photos/id/237/32/32" type="image/x-icon">
 </head>
 <body>
-    <div id="site-wrapper">
-        <div id="header">
+    <div id="site-wrapper"> <!-- only used for styling -->
+        <header id="header">
             <h1 class="page-title">My personal blog about cookies</h1>
-            <img src="logo.jpg" class="page-logo">
-            <div id="main-navigation">
+            <img src="logo.jpg" class="page-logo" alt="">
+            <nav id="main-navigation">
                 <ul>
                     <li class="menu-item">
                         <a href="./other-page-1.html">Home</a>
@@ -22,33 +30,33 @@
                         <a href="./other-page-3.html">About me</a>
                     </li>
                 </ul>
-            </div>
-        </div>
+            </nav>
+        </header>
         <div id="page">
-            <div id="content">
-                <div class="blog-post">
+            <main id="content">
+                <article class="blog-post">
                     <h2 class="post-title">
                         <a href="./post.html">Räksmörgås</a>
                     </h2>
                     <p>Icing pie ice cream powder chocolate cake apple pie cupcake pudding. Topping gingerbread candy canes marzipan marzipan cotton candy apple pie. Dessert marzipan topping chocolate cake halvah bear claw sesame snaps. Sweet roll tootsie roll lemon drops chocolate bar.</p>
                     <p>Jujubes marshmallow cake jelly marzipan chocolate cake marshmallow. Dragée apple pie sugar plum wafer. Jujubes wafer carrot cake gingerbread cake.</p>
-                </div>
-                <div class="blog-post">
+                </article>
+                <article class="blog-post">
                     <h2 class="post-title">
                         <a href="./post.html">Cotton candy jelly-o jelly</a>
                     </h2>
                     <p>Chocolate cake tiramisu chocolate cake. Icing danish brownie. Cake powder fruitcake cheesecake bonbon.</p>
-                </div>
-                <div class="blog-post">
+                </article>
+                <article class="blog-post">
                     <h2 class="post-title">
                         <a href="./post.html">Oat cake jelly brownie</a>
                     </h2>
                     <p>Oat cake jelly brownie pudding biscuit gingerbread halvah liquorice dragée. Donut halvah danish candy canes cotton candy danish chocolate bar soufflé jelly-o. Powder jelly beans carrot cake danish tiramisu macaroon jujubes donut. Lemon drops carrot cake chocolate lollipop candy gummi bears cookie dessert dragée.</p>
-                </div>
-            </div>
-            <div id="sidebar">
+                </article>
+            </main>
+            <aside id="sidebar">
                 <div class="inner">
-                    <div class="info-box">
+                    <section class="info-box">
                         <h2 class="info-title">Related content</h2>
                         <h3 class="info-sub-title">Candy</h3>
                         <ul>
@@ -61,17 +69,17 @@
                             <li>Carrot cake</li>
                             <li>Lollipop icing</li>
                         </ul>
-                    </div>
-                    <div class="info-box">
+                    </section>
+                    <section class="info-box">
                         <h2 class="info-title">Picture of the day</h2>
-                        <img src="todays-picture.jpg">
-                    </div>
+                        <img src="todays-picture.jpg" alt="">
+                    </section>
                 </div>
-            </div>
+            </aside>
         </div>
-        <div id="footer">
+        <footer id="footer">
             My blog &copy;
-        </div>
+        </footer>
     </div>
 </body>
 </html>
