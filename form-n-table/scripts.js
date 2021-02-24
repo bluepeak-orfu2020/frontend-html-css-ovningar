@@ -4,9 +4,14 @@ const orderList = document.querySelector('#order-list');
 const orderListRows = document.querySelector('#order-list-rows');
 
 function addCellToRow(value, tr) {
-    const td = document.createElement('td');
-    td.textContent = value;
-    tr.appendChild(td);
+    // Alternative 1
+    // const td = document.createElement('td');
+    // td.textContent = value;
+    // tr.appendChild(td);
+
+    // Alternative 2 - Only works for tables
+    const cell = tr.insertCell();
+    cell.textContent = value;
 }
 
 orderForm.addEventListener('submit', (event) => {
