@@ -5,16 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .form-element {
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
 </head>
 <body>
     <h1>Order system</h1>
-    <form>
-        <!-- TODO: make form (uppgift 1) -->
+    <form id="order-form">
+        <div class="form-element">
+            <label for="customer-ref">Kundreferens</label>
+            <input type="text" name="customer-ref" id="customer-ref">
+        </div>
+
+        <div class="form-element">
+            <label for="date">Datum</label>
+            <input type="date" name="date" id="date">
+        </div>
+
+        <div class="form-element">
+            <label for="amount">Belopp</label>
+            <input type="number" name="amount" id="amount">
+        </div>
+
+        <div class="form-element">
+            <label for="category">Kategori</label>
+            <select name="category" id="category">
+                <option value="c1">Kategori 1</option>
+                <option value="c2">Kategori 2</option>
+                <option value="c3">Kategori 3</option>
+            </select>
+        </div>
+
+        <div class="form-element">
+            <label for="delivery-standard">Standard</label>
+            <input type="radio" name="delivery" id="delivery-standard" value="standard" checked>
+            <label for="delivery-express">Express</label>
+            <input type="radio" name="delivery" id="delivery-express" value="express">
+        </div>
+
+        <input type="submit" value="Lägg till order!">
     </form>
 
     <h2>Order list</h2>
-    <table>
-        <!-- TODO: make table (uppgift 2A) -->
+    <table id="order-list">
+        <thead>
+            <tr>
+                <th colspan="3"></th>
+                <th colspan="2">Extra info</th>
+            </tr>
+            <tr>
+                <th>Kundreferens</th>
+                <th>Datum</th>
+                <th>Belopp</th>
+                <th>Kategori</th>
+                <th>Leverans</th>
+            </tr>
+        </thead>
+        <tbody id="order-list-rows"></tbody>
     </table>
 
     <h2>Summary</h2>
