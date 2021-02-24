@@ -5,8 +5,56 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    label {
+      display: block;
+      margin: 10px 0;
+    }
+
+    .text-label {
+      display: block;
+    }
+  </style>
 </head>
 <body>
+  <form method="POST" action="https://http-echo-server.azurewebsites.net/api/HttpEchoDemo">
+    <label>Förnamn: <input type="text" name="firstname"></label>
+    <label>Efternamn: <input type="text" name="lastname"></label>
+    <label>Telefonnummer: <input type="tel" name="phone"></label>
+    <label>E-post: <input type="email" name="email"></label>
+    
+    <fieldset>
+      <legend>Matallergier</legend>
+      <label><input type="checkbox" name="allergi" value="laktos"> Laktos</label>
+      <label><input type="checkbox" name="allergi" value="gluten">Gluten</label>
+      <label><input type="checkbox" name="allergi" value="kött"> Kött</label>
+    </fieldset>
+    
+    <label><input type="radio" name="vip" value="0"> Standardpaket</label>
+    <label><input type="radio" name="vip" value="1"> VIP-paket</label>
+    
+    <!-- Alternativ 1 -->
+    <!-- <label>Lottonummer: <input type="number" min="1" max="100" name="lotteri"></label> -->
+    <!-- Alternativ 2 -->
+    <label>
+      Lottonummer:
+      <select name="lotteri">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <!-- osv -->
+      </select>
+    </label>
 
+    <label>
+      <span class="text-label">Annan info:</span>
+      <textarea name="info" cols="30" rows="10"></textarea>
+    </label>
+
+    <input type="submit" value="Skicka!">
+  </form>
 </body>
 </html>
