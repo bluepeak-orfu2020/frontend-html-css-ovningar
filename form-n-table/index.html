@@ -28,7 +28,7 @@
 
         <div class="form-element">
             <label for="amount">Belopp</label>
-            <input type="number" name="amount" id="amount">
+            <input type="number" name="amount" step="0.01" dec id="amount">
         </div>
 
         <div class="form-element">
@@ -70,7 +70,75 @@
 
     <h2>Summary</h2>
     <table>
-        <!-- TODO: make table (uppgift 2B) -->
+        <thead>
+            <tr>
+                <th></th>
+                <th>Totalsumma</th>
+                <th>Antal orders</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="summary-jan">
+                <th>Jan</th>
+                <td class="amount">0</td>
+                <td class="count">0</td>
+            </tr>
+            <tr id="summary-feb">
+                <th>Feb</th>
+                <td class="amount">0</td>
+                <td class="count">0</td>
+            </tr>
+            <tr id="summary-mars">
+                <th>Mars</th>
+                <td class="amount">0</td>
+                <td class="count">0</td>
+            </tr>
+            <tr id="summary-april">
+                <th>April</th>
+                <td class="amount">0</td>
+                <td class="count">0</td>
+            </tr>
+            <tr id="summary-may">
+                <th>Maj</th>
+                <td class="amount">0</td>
+                <td class="count">0</td>
+            </tr>
+            <tr id="summary-juni">
+                <th>Juni</th>
+                <td class="amount">0</td>
+                <td class="count">0</td>
+            </tr>
+            <tr id="summary-juli">
+                <th>Juli</th>
+                <td class="amount">0</td>
+                <td class="count">0</td>
+            </tr>
+            <tr id="summary-aug">
+                <th>Aug</th>
+                <td class="amount">0</td>
+                <td class="count">0</td>
+            </tr>
+            <tr id="summary-sep">
+                <th>Sep</th>
+                <td class="amount">0</td>
+                <td class="count">0</td>
+            </tr>
+            <tr id="summary-okt">
+                <th>Okt</th>
+                <td class="amount">0</td>
+                <td class="count">0</td>
+            </tr>
+            <tr id="summary-nov">
+                <th>Nov</th>
+                <td class="amount">0</td>
+                <td class="count">0</td>
+            </tr>
+            <tr id="summary-dec">
+                <th>Dec</th>
+                <td class="amount">0</td>
+                <td class="count">0</td>
+            </tr>
+        </tbody>
     </table>
     <script src="scripts.js"></script>
 </body>
