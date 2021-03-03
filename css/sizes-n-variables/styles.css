@@ -1,0 +1,102 @@
+/*
+
+  Exercise 1: Change all relevant sizes from px to rem to make the site
+    scale when the root font-size is changed. The root font-size can be changed
+    using the window at the top right.
+
+  Exercise 2: Implement theming on the site by first extracting all color values
+    to variables and then reverse the front- and background colors for the
+    different themes. The theme can be changed in the window at the top right.
+
+*/
+
+/* Font-size controller styling. No need to change this
+   for the exercise. */
+#page-control {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: hsl(34, 57%, 70%);
+  width: 100px;
+  font-size: 16px;
+  padding: 2px;
+  border: 1px solid hsl(34, 57%, 10%);
+  border-top: none;
+  border-right: none;
+}
+
+#root-page-size {
+  display: block;
+  width: 90px;
+}
+
+html, body {
+  margin: 0;
+}
+
+* {
+  box-sizing: content-box;
+}
+
+/* ####### END page-control and default styling ######### */
+
+/* Page styling */
+
+.light:root {
+  /* Add light theme colors here */
+}
+
+.dark:root {
+  /* Add dark theme colors here */
+}
+
+body {
+  background-color: hsl(16deg 100% 90%);
+}
+
+h1 {
+  font-size: 40px;
+  color: hsl(16deg 100% 10%);
+  margin: 0;
+}
+
+h2 {
+  font-size: 30px;
+  margin: 0;
+}
+
+#site {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#header {
+  background-color: hsl(16deg 100% 66%);
+  padding: 20px;
+}
+
+#footer {
+  font-size: 10px;
+  text-align: center;
+  background-color: hsl(16deg 100% 66%);
+  padding: 20px;
+}
+
+#site-banner {
+  width: 100%;
+}
+
+.blog-post {
+  margin: 20px;
+  padding: 10px 0;
+  border-bottom: 2px dotted hsl(16deg 100% 66%);
+  color: hsl(16deg 100% 10%);
+}
+
+.blog-post:last-child {
+  border-bottom: none;
+}
+
+.blog-post p {
+  font-size: 20px;
+}

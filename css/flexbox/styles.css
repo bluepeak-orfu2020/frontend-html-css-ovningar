@@ -1,0 +1,75 @@
+/*
+  Övning: Implementera designen i site.png med hjälp av flexbox.
+    Vi implementerade samma layout i kurs 4 men då utan flexbox.
+    Nedan finns redan en del styling för att hjälpa er med
+    uppgiften. Det är all styling från kurs 4 som inte rör
+    layouten.
+
+    Vill ni ändra i HTML eller CSS går det bra bara slut-
+    resultatet ser ut som på bilden.
+
+    Tips: Ni kan ha en flexbox i en annan flexbox. Dvs, ett
+      element kan vara display: flex samtidigt som det är ett
+      flex-barn.
+*/
+
+* {
+  font-family: "Comic sans ms";
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: lightgray;
+}
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#menu {
+  background-color: deeppink;
+}
+
+.menu-list {
+  font-size: 24px;
+}
+
+.menu-link {
+  padding: 20px;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+}
+
+.menu-link:hover {
+  background-color: forestgreen;
+}
+
+.search-button {
+  background-color: black;
+  color: white;
+  padding: 4px 15px;
+  border: none;
+}
+
+.search-button:hover {
+  background-color: gray;
+  cursor: pointer;
+}
+
+#content {
+  background-color: white;
+}
+
+#sidebar {
+  background-color: deeppink;
+}
+
+#footer {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 40px;;
+}
+

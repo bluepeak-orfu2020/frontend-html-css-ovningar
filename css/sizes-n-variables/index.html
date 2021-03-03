@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- The exercise can be found in style.css-->
+
+  <div id="page-control">
+    <label>
+      Root font size:
+      <input type="number" value="16" id="root-page-size">
+    </label>
+    <label>
+      Theme
+      <select id="theme-picker">
+        <option value="light" selected>Ljus</option>
+        <option value="dark">Mörk</option>
+      </select>
+    </label>
+  </div>
+
+  <div id="site">
+    <header id="header">
+      <h1>Sizes &amp; Variables</h1>
+    </header>
+    <main id="content">
+      <section>
+        <img src="images/banner@1200w.png" srcset="
+          images/banner@600w.png 600w,
+          images/banner@1200w.png 1200w,
+        " alt="" id="site-banner" sizes="600px">
+      </section>
+      <article class="blog-post">
+        <h2>Article 1</h2>
+        <p>Schlitz tbh kale chips try-hard, organic selfies biodiesel blog chartreuse meditation. Knausgaard shabby chic jean shorts gochujang, dreamcatcher scenester shoreditch williamsburg narwhal tilde etsy taiyaki affogato.</p>
+        <p>Copper mug fixie kombucha hammock heirloom readymade knausgaard. Whatever aesthetic enamel pin, gastropub franzen trust fund master cleanse mustache jean shorts sartorial keytar synth selvage shoreditch. Hoodie disrupt DIY tattooed portland before they sold out normcore pop-up blog. 3 wolf moon four loko forage banjo vegan normcore. Glossier portland direct trade schlitz knausgaard YOLO.</p>
+      </article>
+      <article class="blog-post">
+        <h2>Article 2</h2>
+        <p>Four loko taxidermy selvage typewriter marfa coloring book meditation roof party kombucha neutra adaptogen gochujang brooklyn. Tattooed wayfarers banjo beard tote bag master cleanse, fanny pack semiotics viral etsy seitan pitchfork ethical celiac bushwick. You probably haven't heard of them single-origin coffee DIY, vinyl normcore typewriter tattooed aesthetic blog pickled raw denim chartreuse photo booth. Salvia hoodie coloring book shoreditch biodiesel. Austin vape 90's kogi readymade tote bag ethical gastropub.</p>
+        <p>Green juice shoreditch church-key edison bulb. Gochujang swag chartreuse tilde chia, banjo lyft. Photo booth kogi lyft VHS health goth street art tumblr selfies four dollar toast before they sold out +1 put a bird on it affogato. Pour-over helvetica try-hard tbh ugh listicle.</p>
+      </article>
+      <article class="blog-post">
+        <h2>Article 3</h2>
+        <p>Tote bag poutine schlitz la croix flexitarian direct trade brooklyn put a bird on it succulents cray everyday carry. Umami gastropub vape offal hexagon mustache man braid tbh craft beer ennui paleo. Try-hard lyft iceland hella pug thundercats roof party prism. Viral wolf next level prism.</p>
+        <p>Sustainable succulents williamsburg deep v cornhole normcore +1 literally tote bag truffaut. Offal hella quinoa, subway tile man bun seitan you probably haven't heard of them. Pabst truffaut iPhone cardigan gentrify man bun gochujang disrupt snackwave yuccie YOLO pok pok scenester. Helvetica jean shorts brunch selvage iceland. Biodiesel authentic blog crucifix wayfarers, pitchfork humblebrag freegan godard cloud bread flannel master cleanse ethical tofu cold-pressed. Viral you probably haven't heard of them etsy pickled mumblecore master cleanse truffaut chillwave tilde.</p>
+      </article>
+    </main>
+    <footer id="footer">
+      CSS Exercise &copy;
+    </footer>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
