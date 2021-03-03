@@ -15,6 +15,7 @@
 
 * {
   font-family: "Comic sans ms";
+  box-sizing: border-box;
 }
 
 html, body {
@@ -26,14 +27,37 @@ html, body {
 .page {
   max-width: 1200px;
   margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #menu {
   background-color: deeppink;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.logo {
+  margin: 30px 0;
 }
 
 .menu-list {
   font-size: 24px;
+  list-style-type: none;
+
+  display: flex;
+  padding: 0;
+  margin: 0;
 }
 
 .menu-link {
@@ -59,12 +83,32 @@ html, body {
   cursor: pointer;
 }
 
+#main {
+  display: flex;
+  align-items: flex-start;
+
+  margin: 20px 0;
+}
+
 #content {
   background-color: white;
+  margin-right: 20px;
+
+  /* Variant 1 with fixed with sidebar */
+  /* flex-grow: 1; */
+
+  /* Variant 2 with both elements having flexible width */
+  flex-basis: 60%;
 }
 
 #sidebar {
   background-color: deeppink;
+
+  /* Variant 1 with fixed with sidebar */
+  /* min-width: 300px; */
+
+  /* Variant 2 with both elements having flexible width */
+  flex-basis: 40%;
 }
 
 #footer {
