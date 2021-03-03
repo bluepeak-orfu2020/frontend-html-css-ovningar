@@ -42,6 +42,15 @@ html, body {
 
 /* Page styling */
 
+:root {
+  /*
+    Does not work here due to my JS reseting the
+    font-size on the root element. But do work
+    in general.
+  */
+  font-size: 62.5%;
+}
+
 .light:root {
   /* Add light theme colors here */
 }
@@ -55,31 +64,31 @@ body {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 2.5rem; /* 40px */
   color: hsl(16deg 100% 10%);
   margin: 0;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 1.875rem; /* 30px */
   margin: 0;
 }
 
 #site {
-  max-width: 600px;
+  max-width: 37.5rem; /* 600px */
   margin: 0 auto;
 }
 
 #header {
   background-color: hsl(16deg 100% 66%);
-  padding: 20px;
+  padding: 20px; /* do not change due to design decision */
 }
 
 #footer {
-  font-size: 10px;
+  font-size: 0.625rem;
   text-align: center;
   background-color: hsl(16deg 100% 66%);
-  padding: 20px;
+  padding: 20px; /* do not change due to design decision */
 }
 
 #site-banner {
@@ -87,8 +96,8 @@ h2 {
 }
 
 .blog-post {
-  margin: 20px;
-  padding: 10px 0;
+  margin: 20px; /* do not change due to design decision */
+  padding: 10px 0;  /* do not change due to design decision */
   border-bottom: 2px dotted hsl(16deg 100% 66%);
   color: hsl(16deg 100% 10%);
 }
@@ -98,5 +107,5 @@ h2 {
 }
 
 .blog-post p {
-  font-size: 20px;
+  font-size: 1.25rem; /* 20px */
 }
