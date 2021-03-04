@@ -17,3 +17,47 @@
   covered but it can be achived in a few lines of
   CSS.
 */
+
+const container = document.getElementById('container')
+container.style.margin = '120px';
+
+const colors = [];
+const count = 36;
+for (let i = 0; i < count; i++) {
+  const colorDiv = document.createElement('div');
+  colorDiv.style.width = '20px';
+  colorDiv.style.height = '20px';
+  colorDiv.style.backgroundColor = 'hsl(' + (10 * i) + ', 100%, 50%)';
+
+  const angle = i / count;
+  colorDiv.style.position = 'absolute';
+  colorDiv.style.transform = 'rotate(' + (360 * angle) +  'deg) translate(100px)';
+
+  container.appendChild(colorDiv);
+
+  colors.push({
+    value: 10 * i,
+    element: colorDiv
+  })
+}
+
+function updateValues() {
+  colors.forEach((color) => {
+    let newValue = color.value + 10
+    if (newValue >= 360) {
+      newValue = 0;
+    }
+    color.value = newValue;
+  })
+}
+
+function updateColors() {
+  colors.forEach((color) => {
+    color.element.style.backgroundColor = 'hsl(' + color.value + ', 100%, 50%)';
+  })
+}
+
+setInterval(() => {
+  updateValues();
+  updateColors();
+}, 200);
